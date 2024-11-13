@@ -1,7 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
-
 import BackToTopButton from "./BackToTopButton";
 import "./stylle.css";
 
@@ -32,30 +30,6 @@ const ContactForm = () => {
               </span>
             </li>
           </ul>
-          <hr />
-          <ul className="social-media-list">
-            <li>
-              <a
-                href="https://www.instagram.com/aditx343/"
-                target="_blank"
-                className="contact-icon"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faInstagram} aria-hidden="true" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/adit-shah-720639222/"
-                target="_blank"
-                className="contact-icon"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon icon={faLinkedin} aria-hidden="true" />
-              </a>
-            </li>
-          </ul>
-          <hr />
         </div>
       </div>
       <BackToTopButton />

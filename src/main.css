@@ -1,38 +1,40 @@
-.navbar{
-    position: fixed;
+/* Main Navbar styling remains the same */
+.navbar {
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    height:100px;
-    background-color: #151925;
-    transition: top 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #151925;
+  transition: top 0.3s;
 }
-.left{
-    width:35%;
-    display: flex;
-    justify-content: left;
+
+.left {
+  width: 35%;
+  display: flex;
+  justify-content: left;
 }
-.right{
-    width:55%;
-    display: flex;
-    justify-content: space-around;
+
+.right {
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
 }
-.button{
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    background-color: transparent;
-    border-color: transparent;
-    width:120px;
-    height:30px;
-    font-size: 18px;
-    color:#03B0FD;
-    cursor: pointer;
-}
+
 .button {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  background-color: transparent;
+  border-color: transparent;
+  width: 120px;
+  height: 30px;
+  font-size: 18px;
+  color: #03B0FD;
+  cursor: pointer;
   position: relative;
   border: none;
   transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -65,50 +67,52 @@
   transition-property: width, left;
 }
 
+body {
+  background-color: #151925;
+}
 
-body{
+.title {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+/* Responsive Styles for Navbar */
+.menu-toggle {
+  display: none; /* Hide the toggle button on larger screens */
+  background: transparent;
+  border: none;
+  font-size: 30px;
+  color: #03B0FD;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .right {
+    display: none; /* Hide the regular navbar links on small screens */
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
     background-color: #151925;
+  }
+
+  .right.open {
+    display: flex; /* Show the menu when the toggle button is clicked */
+  }
+
+  .menu-toggle {
+    display: block; /* Show the toggle button on small screens */
+  }
+
+  .button {
+    width: 100%; /* Full width for each menu item */
+    text-align: center;
+    padding: 10px 0;
+  }
 }
-.title{
-    color:white;
-    font-family:"Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 45px;
-}
-
-
-@keyframes typing {
-    /* web developer */
-    0%, 27.3488% { content: ""; }
-    1.667%, 48.2093% { content: "w"; }
-    3.334%, 46.0698% { content: "we"; }
-    5.001%, 44.9302% { content: "web"; }
-    6.668%, 42.7907% { content: "web "; }
-    8.335%, 40.6512% { content: "web d"; }
-    11.669%, 38.5116% { content: "web de"; }
-    13.336%, 36.3721% { content: "web dev"; }
-    15.003%, 34.2326% { content: "web deve"; }
-    16.670%, 32.0930% { content: "web devel"; }
-    19.3953%, 31.9535% { content: "web develo"; }
-    21.5349%, 29.8140% { content: "web develop"; }
-    23.6744%, 28.6744% { content: "web develope"; }
-    25.8140%, 26.5349% { content: "web developer"; }
-  
-  }
-  
-
-
-  .typewriter {
-    --caret:#03B0FD;
-  }
-  
-  .typewriter::before {
-    content: "";
-    animation: typing 10s infinite;
-  }
-  
-  .typewriter::after {
-    content: "";
-    border-right: 1px solid var(--caret);
-    animation: blink 0.5s linear infinite;
-  }
