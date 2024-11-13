@@ -23,7 +23,7 @@ const Main = () => {
         <h3 className="it_is_me">Hey! It's Me</h3>
         <h2 className="names">Adit Shah</h2>
         <p className="i_am_a">
-          I am a&nbsp;<span class="typewriter"></span>
+          I am a web developer
         </p>
 
         <div className="flex1">
